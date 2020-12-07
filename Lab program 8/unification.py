@@ -62,13 +62,13 @@ def main():
     while(ch == 'y'):
         preds_x = int(input("No. of preds:"))
         for i in range(preds_x):
-            print("Enter pred_arr ", (i+1), " :")
+            print("Enter pred ", (i+1), " :")
             pred_arr[i] = input()
-            print("No. of args ", pred_arr[i], " :")
+            print("No. of args for pred ", pred_arr[i], " :")
             arg_y[i] = int(input())
 
             for j in range(arg_y[i]):
-                print("Enter arg_arr ", j+1, " :")
+                print("Enter arg ", j+1, " :")
                 arg_arr[i][j] = input()
         output()
         check_cond()
