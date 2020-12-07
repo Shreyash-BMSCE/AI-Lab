@@ -66,5 +66,17 @@ def solve(rules, goal):
         i += 1
     return steps
 
-#main and output remaining
+def main(rules, goal):
+    rules = rules.split(' ')
+    steps = solve(rules, goal)
+    print('\nStep\t|Clause\t|Derivation\t')
+    print('~' * 30)
+    i = 1
+    for step in steps:
+        print(f' {i}.\t| {step}\t| {steps[step]}\t')
+        i += 1
+        
+
+rules = 'PvQ ~PvR ~QvR' 
+main(rules, 'R')
 
